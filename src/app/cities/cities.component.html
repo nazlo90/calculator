@@ -1,0 +1,23 @@
+<h1>Cities list</h1>
+<input type="text" [(ngModel)]="searchTerms">
+<h2>{{searchTerms}}</h2>
+<button (click)="deleteText()">deleteText</button>
+<button (click)="transformText()">transformText</button>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<app-city *ngFor="let city of typedArray; let index = index"
+          (cityDeleted)="cathcDeleting($event)"
+          [index]="index"
+          [city]="city"></app-city>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
